@@ -36,7 +36,11 @@ lv_obj_t* zmk_display_status_screen() {
 
     // Create the battery canvas to be used in the `render_battery` function.
     battery_canvas = lv_canvas_create(screen);
+#if IS_ENABLED(CONFIG_NICE_VIEW_ELEMENTAL_FLIP)
+    lv_obj_align(battery_canvas, LV_ALIGN_BOTTOM_LEFT, 0, 0);
+#else
     lv_obj_align(battery_canvas, LV_ALIGN_TOP_RIGHT, 0, 0);
+#endif
     lv_canvas_set_buffer(
         battery_canvas,
         battery_canvas_buffer,
@@ -44,10 +48,14 @@ lv_obj_t* zmk_display_status_screen() {
         BATTERY_CANVAS_HEIGHT,
         LV_IMG_CF_TRUE_COLOR
     );
-    
+
     // Create the info canvas to be used in the `render_connectivity` function.
     connectivity_canvas = lv_canvas_create(screen);
+#if IS_ENABLED(CONFIG_NICE_VIEW_ELEMENTAL_FLIP)
+    lv_obj_align(connectivity_canvas, LV_ALIGN_TOP_LEFT, 0, 0);
+#else
     lv_obj_align(connectivity_canvas, LV_ALIGN_BOTTOM_RIGHT, 0, 0);
+#endif
     lv_canvas_set_buffer(
         connectivity_canvas,
         connectivity_canvas_buffer,
@@ -58,7 +66,11 @@ lv_obj_t* zmk_display_status_screen() {
 
     // Create the main canvas to be used in the `render_main` function.
     main_canvas = lv_canvas_create(screen);
+#if IS_ENABLED(CONFIG_NICE_VIEW_ELEMENTAL_FLIP)
+    lv_obj_align(main_canvas, LV_ALIGN_BOTTOM_RIGHT, 0, 0);
+#else
     lv_obj_align(main_canvas, LV_ALIGN_TOP_LEFT, 0, 0);
+#endif
     lv_canvas_set_buffer(
         main_canvas,
         main_canvas_buffer,

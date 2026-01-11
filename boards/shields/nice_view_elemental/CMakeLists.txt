@@ -24,6 +24,12 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
     ./src/utils/rotate_connectivity_canvas.c
   )
 
+  if(CONFIG_NICE_VIEW_ELEMENTAL_FLIP)
+    zephyr_library_sources(
+      ./src/utils/rotate_canvas_180.c
+    )
+  endif()
+
   if(NOT CONFIG_ZMK_SPLIT OR CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
     zephyr_library_sources(
       ./src/central/initialize_listeners.c

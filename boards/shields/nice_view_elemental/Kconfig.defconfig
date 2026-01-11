@@ -55,4 +55,8 @@ if SHIELD_NICE_VIEW_ELEMENTAL
     config NICE_VIEW_ELEMENTAL_SHADOW
         bool "Displays a shadow around the layer name."
         default y
+
+    config NICE_VIEW_ELEMENTAL_FLIP
+        bool "Flip the display 180 degrees for upside-down mounting."
+        default n
 endif

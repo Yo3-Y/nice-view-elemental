@@ -102,8 +102,9 @@ Displays the connectivity status for both the central and peripheral halves.
 | `CONFIG_NICE_VIEW_ELEMENTAL_BACKGROUND`         | bool | Displays a background.                                                                                            | y       |
 | `CONFIG_NICE_VIEW_ELEMENTAL_OUTLINE`            | bool | Displays an outline around the shadow of the layer name. The outline is the 1px white line around the layer name. | y       |
 | `CONFIG_NICE_VIEW_ELEMENTAL_SHADOW`             | bool | Displays a shadow around the layer name. The shadow is the 4px black line around the layer name.                  | y       |
+| `CONFIG_NICE_VIEW_ELEMENTAL_FLIP`               | bool | Flip the display 180 degrees for upside-down mounting.                                                            | n       |
 <!--
-| `CONFIG_NICE_VIEW_ELEMENTAL_CAPITALIZATION`     | bool | Enables full capitalization for the layer name.                                                                   | y       | 
+| `CONFIG_NICE_VIEW_ELEMENTAL_CAPITALIZATION`     | bool | Enables full capitalization for the layer name.                                                                   | y       |
 -->
 
 ## How It Works

@@ -3,6 +3,7 @@
 #include <zmk/display/status_screen.h>
 
 #include <lvgl.h>
+#include <zephyr/sys/util.h>
 
 #define SCREEN_WIDTH 160
 #define SCREEN_HEIGHT 68
